@@ -1,0 +1,30 @@
+<div class="modal-overlay">
+  <span class="close-icon" (click)="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="image-section">
+        <img [src]="selectedImageUrl" alt="Full Screen Image" />
+      </div>
+
+      <div class="form-section">
+        <form [formGroup]="taskForm" (submit)="assignTask()">
+          <div>
+            <label for="description">Task:</label>
+            <input type="text" id="task" formControlName="task" />
+          </div>
+
+          <div>
+            <label for="status">Task Status:</label>
+            <select id="status" formControlName="status">
+              <option value="To Do">To Do</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+
+          <button type="submit">Assign Task</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

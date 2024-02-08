@@ -1,0 +1,45 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .image-item {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-item {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #3498db;
+    color: #3498db;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: #3498db;
+      color: #fff;
+    }
+  
+    &.active {
+      background-color: #3498db;
+      color: #fff;
+    }
+  
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
