@@ -13,7 +13,7 @@
 .modal-content {
   max-width: 90%;
   max-height: 90%;
-  overflow-y: auto; /* Make the content scrollable */
+  overflow-y: auto;
   position: relative;
 }
 
@@ -22,17 +22,17 @@
 }
 
 .image-section img {
-  width: 80%; /* Adjust the width of the image section */
+  width: 80%;
 }
 
 .form-section {
-  width: 20%; /* Adjust the width of the form section */
-  padding-left: 20px;
+  width: 20%;
+  padding-left: 10px;
   background-color: rgb(255, 255, 255);
 }
 
 .form-section form {
-  width: 100%; /* Ensure the form takes full width of the form section */
+  width: 100%;
 }
 
 .close-icon {

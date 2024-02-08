@@ -3,26 +3,19 @@
   <div class="modal-content">
     <div class="modal-body">
       <div class="image-section">
-        <img [src]="selectedImageUrl" alt="Full Screen Image" />
+        <img
+          [src]="selectedImage!.url"
+          alt="Full Screen Image: selectedImageUrl"
+        />
       </div>
 
       <div class="form-section">
         <form [formGroup]="taskForm" (submit)="assignTask()">
-          <div>
+          <div class="form-section">
             <label for="description">Task:</label>
-            <input type="text" id="task" formControlName="task" />
+            <input type="checkbox" id="task" formControlName="task" />
+            <button type="submit">Assign Task</button>
           </div>
-
-          <div>
-            <label for="status">Task Status:</label>
-            <select id="status" formControlName="status">
-              <option value="To Do">To Do</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Done">Done</option>
-            </select>
-          </div>
-
-          <button type="submit">Assign Task</button>
         </form>
       </div>
     </div>

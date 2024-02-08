@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ImagesService } from 'src/app/services/images.service';
 import { Image } from 'src/app/interface/image';
+import { ImagesService } from 'src/app/services/images.service';
 
 @Component({
-  selector: 'app-image-grid',
-  templateUrl: './image-grid.component.html',
-  styleUrls: ['./image-grid.component.scss'],
+  selector: 'app-assigned-image',
+  templateUrl: './assigned-image.component.html',
+  styleUrls: ['./assigned-image.component.scss'],
 })
-export class ImageGridComponent implements OnInit {
+export class AssignedImageComponent {
   images$!: Observable<Image[]>;
   currentPage = 1;
-  pageSize = 16; // Adjust the number of images per page
+  pageSize = 16;
   totalPages$!: Observable<number>;
   selectedImage: Image | undefined;
 
@@ -19,11 +19,10 @@ export class ImageGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadImages();
-    this.imagesService.getImageList().subscribe(() => {});
   }
 
   loadImages(): void {
-    this.images$ = this.imagesService.getUnassignedImagesPage(
+    this.images$ = this.imagesService.getAssignedImagesPage(
       this.currentPage,
       this.pageSize
     );
@@ -51,7 +50,7 @@ export class ImageGridComponent implements OnInit {
     this.selectedImage = undefined;
   }
 
-  onImageClick(image: Image): void {
-    this.selectedImage = image;
-  }
+  // onImageClick(image: Image): void {
+  //   this.selectedImage = image;
+  // }
 }

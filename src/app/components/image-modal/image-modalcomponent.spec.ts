@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FullScreenOverlayComponent } from './image-modal.component';
+import { ImageModalComponent } from './image-modal.component';
 
 describe('FullScreenOverlayComponent', () => {
-  let component: FullScreenOverlayComponent;
-  let fixture: ComponentFixture<FullScreenOverlayComponent>;
+  let component: ImageModalComponent;
+  let fixture: ComponentFixture<ImageModalComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FullScreenOverlayComponent],
+      declarations: [ImageModalComponent],
     });
-    fixture = TestBed.createComponent(FullScreenOverlayComponent);
+    fixture = TestBed.createComponent(ImageModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
