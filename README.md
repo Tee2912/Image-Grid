@@ -1,5 +1,5 @@
-
 # 👩‍🚀 Senior Front-End Engineer Take-Home Project
+
 ## 🚀 Image Grid with Angular
 
 Hello! 👋
@@ -14,7 +14,6 @@ The images are provided in the form of `.png` files in an S3 bucket. Within the 
 
 Since there are a lot of images and each image is large, you might want to consider paginating the images.
 
-
 📝 You will be assessed on:
 
 1. 💨 How performant the site is. Take time to consider how to load the images in a way that allows the user to have a seamless experience when browsing the images.
@@ -22,6 +21,7 @@ Since there are a lot of images and each image is large, you might want to consi
 3. 🐞 The correctness of the site, i.e. no bugs, no broken links, etc.
 
 Action steps:
+
 - Fork this repository, and commit to your own repo. Once completed, share with us your forked Github URL.
 
 All the best, and we hope this gives you a flavour of what you'll be doing here! 🔥

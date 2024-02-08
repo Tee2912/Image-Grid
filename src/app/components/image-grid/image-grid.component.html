@@ -1,0 +1,33 @@
+<div class="image-grid">
+  <div
+    *ngFor="let image of images$ | async"
+    class="image-item"
+    (click)="onImageClick(image)"
+  >
+    <img [src]="image.url" alt="Image" />
+  </div>
+</div>
+
+<app-image-modal
+  *ngIf="selectedImage"
+  [selectedImage]="selectedImage"
+  (close)="closeModal()"
+></app-image-modal>
+
+<div class="custom-pagination">
+  <button
+    class="pagination-item"
+    (click)="prevPage()"
+    [disabled]="currentPage === 1"
+  >
+    &lt;
+  </button>
+  <span>Page {{ currentPage }} of {{ totalPages$ | async }}</span>
+  <button
+    class="pagination-item"
+    (click)="nextPage()"
+    [disabled]="currentPage === (totalPages$ | async)"
+  >
+    &gt;
+  </button>
+</div>
